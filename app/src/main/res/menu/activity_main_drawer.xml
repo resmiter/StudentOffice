@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/commonGroup"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_action_account"
+            android:title="@string/menu_account" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_action_news"
+            android:title="@string/menu_news" />
+    </group>
+
+    <group
+        android:id="@+id/headmanGroup"
+        android:checkableBehavior="single">
+        <item android:title="@string/headman_drawer">
+            <menu>
+                <item
+                    android:id="@+id/nav_visit_requests"
+                    android:icon="@drawable/ic_action_visit_requests"
+                    android:title="@string/menu_visit_requests" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/adminGroup"
+        android:checkableBehavior="single">
+        <item android:title="@string/admin_drawer">
+            <menu>
+                <item
+                    android:id="@+id/nav_requests_to_admin"
+                    android:icon="@drawable/ic_action_requests_to_admin"
+                    android:title="@string/menu_requests_to_admin" />
+                <item
+                    android:id="@+id/nav_group_statistics"
+                    android:icon="@drawable/ic_action_group_statistics"
+                    android:title="@string/menu_group_statistics" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

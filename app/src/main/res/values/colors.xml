@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#1E88E5</color>
+    <color name="navDrawer">#E3F2FD</color>
+    <color name="actionBar">#37474f</color>
+    <color name="fab">#ff6e40</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+
+</resources>
+
+<!--<color name="shade">#64FFDA</color>-->
+<!--<color name="accentShade">#A7FFEB</color>-->
+<!--<color name="materialRed">#E44336</color>-->
+<!--<color name="materialYellow">#FFD740</color>-->
+<!--<color name="colorItem">#CFD8DC</color>-->
