@@ -15,6 +15,7 @@
 
     <style name="AccountButton" >
         <item name="android:background">@drawable/custom_button</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 

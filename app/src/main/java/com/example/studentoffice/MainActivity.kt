@@ -1,6 +1,8 @@
 package com.example.studentoffice
 
+import android.opengl.Visibility
 import android.os.Bundle
+import android.text.Layout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
@@ -13,10 +15,20 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.*
+import kotlinx.android.synthetic.main.fragment_account.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var btn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +54,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+//        hideElemsByUser(navView.menu)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -53,5 +68,24 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    private fun hideElemsByUser(menu: Menu) {
+        val type: String = "headman"
+        when (type) {
+            "student" -> {
+                menu.setGroupVisible(R.id.headmanGroup, false)
+                menu.setGroupVisible(R.id.adminGroup, false)
+            }
+            "headman" -> {
+                menu.setGroupVisible(R.id.adminGroup, false)
+                menu.setGroupVisible(R.id.accountLinearLayoutAdmin, false)
+            }
+            "admin" -> {
+                menu.setGroupVisible(R.id.headmanGroup, false)
+                menu.setGroupVisible(R.id.accountLinearLayoutHeadman, false)
+            }
+
+        }
     }
 }

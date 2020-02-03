@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/background"
+    android:background="@mipmap/background4"
     >
 
     <ImageView
@@ -40,86 +40,97 @@
         app:layout_constraintStart_toStartOf="@+id/nameProfile"
         app:layout_constraintTop_toBottomOf="@+id/nameProfile" />
 
-    <Button
-        android:id="@+id/accountChangeDate"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_change_date"
-        app:layout_constraintBottom_toTopOf="@+id/accountStatistic"
-        tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/accountStatistic"
-        style="@style/AccountButton"
+    <LinearLayout
+        android:id="@+id/accountLinearLayoutHeadman"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_statistic"
-        app:layout_constraintBottom_toTopOf="@+id/accountSendToAdmin"
-        tools:layout_editor_absoluteX="203dp" />
-
-    <Button
-        android:id="@+id/accountSendToAdmin"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_send_to_admin"
-        app:layout_constraintBottom_toTopOf="@+id/accountChangeDateOfStudent"
-        tools:layout_editor_absoluteX="236dp" />
-
-    <Button
-        android:id="@+id/accountChangeDateOfStudent"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_change_date_of_student"
-        app:layout_constraintBottom_toTopOf="@+id/accountCreateGroup"
-        tools:layout_editor_absoluteX="169dp" />
-
-    <Button
-        android:id="@+id/accountCreateGroup"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_create_group"
-        app:layout_constraintBottom_toTopOf="@+id/accountChangeGroup"
-        tools:layout_editor_absoluteX="264dp" />
-
-    <Button
-        android:id="@+id/accountChangeGroup"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_change_group"
-        app:layout_constraintBottom_toTopOf="@+id/accountCreateStudent"
-        tools:layout_editor_absoluteX="253dp" />
-
-    <Button
-        android:id="@+id/accountCreateStudent"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_create_student"
-        app:layout_constraintBottom_toTopOf="@+id/accountChangeStudent"
-        tools:layout_editor_absoluteX="235dp" />
-
-    <Button
-        android:id="@+id/accountChangeStudent"
-        style="@style/AccountButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/account_change_student"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="92dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/accountCreateStudent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            android:id="@+id/accountChangeStudentForHeadman"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_change_student" />
 
+        <Button
+            android:id="@+id/accountChangeDate"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_change_date" />
+
+        <Button
+            android:id="@+id/accountStatistic"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_statistic" />
+
+        <Button
+            android:id="@+id/accountSendToAdmin"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account_send_to_admin" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accountLinearLayoutAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="92dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/accountCreateGroup"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_create_group" />
+
+        <Button
+            android:id="@+id/accountChangeGroup"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_change_group" />
+
+        <Button
+            android:id="@+id/accountCreateStudent"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_create_student" />
+
+        <Button
+            android:id="@+id/accountChangeStudentForAdmin"
+            style="@style/AccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/account_change_date_of_student" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,17 +3,19 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#1E88E5</color>
-    <color name="navDrawer">#E3F2FD</color>
+
+    <color name="navDrawer">#313131</color>
     <color name="actionBar">#37474f</color>
-    <color name="fab">#ff6e40</color>
+    <color name="fab">#263238</color>
+
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="blue">#b3e5fc</color>
+    <color name="lilBlue">#63ccff</color>
 
+    <color name="newsColorItemBg">#f6f6f6</color>
+    <color name="newsColorTitle">#1E88E5</color>
+    <color name="newsColorDescription">#999da4</color>
+    <color name="newsColorDate">#999da4</color>
 
 </resources>
-
-<!--<color name="shade">#64FFDA</color>-->
-<!--<color name="accentShade">#A7FFEB</color>-->
-<!--<color name="materialRed">#E44336</color>-->
-<!--<color name="materialYellow">#FFD740</color>-->
-<!--<color name="colorItem">#CFD8DC</color>-->
