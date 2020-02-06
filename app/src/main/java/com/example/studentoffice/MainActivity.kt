@@ -22,6 +22,8 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import com.example.studentoffice.model.News
+import com.example.studentoffice.model.Newss
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_account.*
 
@@ -85,7 +87,6 @@ class MainActivity : AppCompatActivity() {
                 menu.setGroupVisible(R.id.headmanGroup, false)
                 menu.setGroupVisible(R.id.accountLinearLayoutHeadman, false)
             }
-
         }
     }
 }
