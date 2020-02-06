@@ -3,11 +3,19 @@ package com.example.studentoffice.ui.news
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.studentoffice.model.Article
+import com.example.studentoffice.model.News
+import com.example.studentoffice.network.InternetConnection
 
 class NewsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "http://f-imitf.udsu.ru/"
+    private lateinit var newssss: MutableLiveData<News>
+
+    private val _news = MutableLiveData<News>().apply {
+        val internetConnection = InternetConnection()
+        internetConnection.loadData(this)
     }
-    val text: LiveData<String> = _text
+
+    val news: LiveData<News> = _news
+
 }

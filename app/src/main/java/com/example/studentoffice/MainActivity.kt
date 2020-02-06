@@ -1,8 +1,6 @@
 package com.example.studentoffice
 
-import android.opengl.Visibility
 import android.os.Bundle
-import android.text.Layout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
@@ -15,17 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import android.view.MenuItem
-import android.view.View
 import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.Toast
-import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import com.example.studentoffice.model.News
-import com.example.studentoffice.model.Newss
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.fragment_account.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,7 +50,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }

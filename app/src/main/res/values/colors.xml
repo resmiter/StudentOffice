@@ -15,7 +15,7 @@
 
     <color name="newsColorItemBg">#f6f6f6</color>
     <color name="newsColorTitle">#1E88E5</color>
-    <color name="newsColorDescription">#999da4</color>
+    <color name="newsColorDescription">#37474f</color>
     <color name="newsColorDate">#999da4</color>
 
 </resources>

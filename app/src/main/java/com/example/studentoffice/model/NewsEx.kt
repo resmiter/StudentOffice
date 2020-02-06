@@ -1,6 +1,6 @@
 package com.example.studentoffice.model
 
-public class News(
+public class NewsEx(
     var title: String = "Example",
     var description: String = "Example",
     var date: String = "Example",
