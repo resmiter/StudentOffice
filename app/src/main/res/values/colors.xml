@@ -13,9 +13,10 @@
     <color name="blue">#b3e5fc</color>
     <color name="lilBlue">#63ccff</color>
 
-    <color name="newsColorItemBg">#f6f6f6</color>
+    <color name="newsColorBg">#eceff1</color>
+    <color name="newsColorItemBg">#eceff1</color>
     <color name="newsColorTitle">#1E88E5</color>
     <color name="newsColorDescription">#37474f</color>
-    <color name="newsColorDate">#999da4</color>
+    <color name="newsColorDate">#e0e0e0</color>
 
 </resources>
