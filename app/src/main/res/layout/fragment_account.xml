@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/background4"
-    >
+    android:background="@mipmap/background2">
 
     <ImageView
         android:id="@+id/accountImageView"
@@ -23,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_title"
-        android:textColor="#FFFFFF"
+        android:textColor="#000"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/accountImageView"
         app:layout_constraintStart_toStartOf="@+id/accountImageView"
@@ -34,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nav_header_subtitle"
-        android:textColor="#FFFFFF"
+        android:textColor="#000"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/nameProfile"
         app:layout_constraintStart_toStartOf="@+id/nameProfile"

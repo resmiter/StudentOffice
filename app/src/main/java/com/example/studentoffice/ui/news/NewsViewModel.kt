@@ -9,13 +9,13 @@ import com.example.studentoffice.network.InternetConnection
 
 class NewsViewModel : ViewModel() {
 
-    private lateinit var newssss: MutableLiveData<News>
-
+    //creatig, if does not exist
     private val _news = MutableLiveData<News>().apply {
         val internetConnection = InternetConnection()
         internetConnection.loadData(this)
     }
 
+    //get
     val news: LiveData<News> = _news
 
 }

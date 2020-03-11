@@ -19,7 +19,9 @@
     <group
         android:id="@+id/headmanGroup"
         android:checkableBehavior="single">
-        <item android:title="@string/headman_drawer">
+        <item
+            android:id="@+id/someId"
+            android:title="@string/headman_drawer">
             <menu>
                 <item
                     android:id="@+id/nav_visit_requests"

@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#1E88E5</color>
 
-    <color name="navDrawer">#313131</color>
+    <color name="navDrawer">#ececec</color>
     <color name="actionBar">#37474f</color>
     <color name="fab">#263238</color>
 

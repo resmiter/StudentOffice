@@ -2,13 +2,23 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <alpha
-        android:duration="100"
+        android:duration="500"
         android:fromAlpha="0.0"
         android:toAlpha="1.0" />
 
     <translate
-        android:duration="100"
-        android:fromXDelta="-100%"
-        android:fromYDelta="0%" />
+        android:duration="500"
+        android:fromXDelta="0%"
+        android:fromYDelta="+100%" />
 
 </set>
+
+    <!--<alpha-->
+    <!--android:duration="500"-->
+    <!--android:fromAlpha="0.0"-->
+    <!--android:toAlpha="1.0" />-->
+
+    <!--<translate-->
+    <!--android:duration="500"-->
+    <!--android:fromXDelta="-100%"-->
+    <!--android:fromYDelta="0%" />-->

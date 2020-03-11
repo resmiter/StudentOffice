@@ -1,12 +1,16 @@
 package com.example.studentoffice.ui.news
 
+import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.graphics.Point
 import android.os.Bundle
+import android.text.Layout
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
+import android.view.*
+import android.view.animation.AnimationUtils
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -16,6 +20,8 @@ import com.example.studentoffice.R
 import com.example.studentoffice.adapter.NewsAdapter
 import com.example.studentoffice.model.Article
 import com.example.studentoffice.model.News
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.dialog_news.view.*
 
 class NewsFragment : Fragment(), NewsAdapter.OnNewsListener {
 
@@ -59,18 +65,35 @@ class NewsFragment : Fragment(), NewsAdapter.OnNewsListener {
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-
     override fun onNewsListener(position: Int) {
-        Toast.makeText(context, position.toString(), Toast.LENGTH_SHORT).show()
+        if (context != null) {
+            val newsDialog = Dialog(context!!)
+            var article: Article = news.articles[position]
+            newsDialog.setContentView(R.layout.dialog_news)
 
-        var article: Article = news.articles[position]
-        val intent = Intent(context, ViewANewsActivity::class.java)
-        startActivity(intent);
 
+            val title: TextView = newsDialog.findViewById(R.id.newsTitleDialog)
+            val description: TextView = newsDialog.findViewById(R.id.newsDescriptionDialog)
+            val imageNews: ImageView = newsDialog.findViewById(R.id.imageNewsDialog)
+
+            imageNews.animation = AnimationUtils.loadAnimation(context, R.anim.fade_transition_image_news_animation)
+            title.animation = AnimationUtils.loadAnimation(context, R.anim.fade_transition_title_news_animation)
+            description.animation = AnimationUtils.loadAnimation(context, R.anim.fade_transition_description_news_animation)
+
+            title.movementMethod = ScrollingMovementMethod()
+            description.movementMethod = title.movementMethod
+
+            title.text = article.title
+            description.text = article.content
+            Picasso.get().load(article.urlToImage).into(imageNews)
+
+            val display: Display = activity!!.windowManager!!.defaultDisplay
+            val size = Point()
+            display.getSize(size)
+            newsDialog.window!!.setLayout(size.x, size.x)
+
+            newsDialog.show()
+        }
     }
 
 }

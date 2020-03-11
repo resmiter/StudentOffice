@@ -56,12 +56,11 @@ open class NewsAdapter(private val articles: List<Article>, private val onNewsLi
         public var description: TextView = newsView.findViewById(R.id.newsDescription)
         public var date: TextView = newsView.findViewById(R.id.newsDate)
         public var image: ImageView = newsView.findViewById(R.id.newsImg)
-        private var forOnClickListener = newsView.setOnClickListener(this)
+        private var justforSetOnClickListener = newsView.setOnClickListener(this)
 
         override fun onClick(p0: View?) {
             onNewsListener.onNewsListener(adapterPosition)
         }
-
     }
 
     public interface OnNewsListener {

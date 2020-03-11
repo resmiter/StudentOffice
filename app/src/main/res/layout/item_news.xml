@@ -48,7 +48,6 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="18dp"
             android:lineSpacingExtra="8dp"
-            android:maxLines="3"
             android:text="My fourth hour class got out late, and the lunch table I always sat at was full by the time I arrived. Mike was there, Jessica and Angela, Conner, Tyler, Eric and Lauren. Katie Marshall, the redheaded junior who lived around the Here was another puzzling question; and as Alice could not think of any good reason, and as the Caterpillar seemed to be in a VERY unpleasant state of mind, she turned away."
             android:textColor="@color/newsColorDescription" />
 
