@@ -1,39 +1,39 @@
 <resources>
 
-    <string name="app_name">studentService</string>
+    <string name="app_name">Диплом</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-
-    <!--    navigation drawer-->
+    <!--    toolbar-->
     <string name="action_report">Сообщить об ошибке</string>
 
-
+    <!--    navigation header-->
     <string name="nav_header_title">Дмитрий Вахрушев</string>
     <string name="nav_header_subtitle">ОАБ 09.03.01–41</string>
     <string name="nav_header_desc">Navigation header</string>
 
+    <!--    navigation drawer items-->
     <string name="menu_account">Личный кабинет</string>
     <string name="menu_news">Новости</string>
     <string name="menu_visit_requests">Запросы на посещение</string>
     <string name="menu_requests_to_admin">Запросы от студентов</string>
     <string name="menu_group_statistics">Посещаемость</string>
+    <string name="menu_item_switch">Тёмная тема</string>
+    <string name="menu_logout">Выйти</string>
 
     <string name="headman_drawer">Для старосты</string>
     <string name="admin_drawer">Для админа</string>
 
-    <!--    registration-->
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+
+    <!--    login-->
+    <string name="prompt_login">Логин</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-
-    <!--    account-->
 
     <!--    student-->
     <string name="account_change_date">"Изменить данные"</string>
@@ -46,4 +46,5 @@
     <string name="account_change_group">"Изменить группу"</string>
     <string name="account_create_student">"Добавить студента"</string>
     <string name="account_change_student">"Изменить студента"</string>
+
 </resources>

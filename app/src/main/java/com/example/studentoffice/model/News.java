@@ -1,11 +1,11 @@
 package com.example.studentoffice.model;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class News {
-
     @SerializedName("status")
     @Expose
     private String status;

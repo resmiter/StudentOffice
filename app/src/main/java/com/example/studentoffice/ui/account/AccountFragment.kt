@@ -1,21 +1,21 @@
 package com.example.studentoffice.ui.account
 
+import android.app.FragmentTransaction
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.example.studentoffice.R
-import kotlinx.android.synthetic.main.fragment_account.*
+import com.example.studentoffice.ui.account.tabs.ChangeStudentFragment
 import kotlinx.android.synthetic.main.fragment_account.view.*
-import org.w3c.dom.Text
 
-class AccountFragment : Fragment() {
+
+class AccountFragment : Fragment(R.layout.fragment_account) {
 
     private lateinit var accountViewModel: AccountViewModel
 
@@ -27,36 +27,41 @@ class AccountFragment : Fragment() {
         accountViewModel =
             ViewModelProviders.of(this).get(AccountViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_account, container, false)
-
-
-
-        val linearLayout: LinearLayout = root.accountLinearLayoutAdmin
-        linearLayout.visibility = LinearLayout.GONE
-
-//        val textView: TextView = root.findViewById(R.id.text_account)
-//        accountViewModel.text.observe(this, Observer {
-//            textView.text = it
-//        })
+        hideElemByUser(root)
+        val button: Button = root.buttonAccountChangeStudentForHeadman
+        button.setOnClickListener {
+            swapFragment()
+        }
         return root
     }
 
-//    private fun hideElemByUser(root: View) {
-//        val typeOfUser :String = "stud"
-//        when (typeOfUser){
-//            "stud" -> {
-//                val btn: Button = root.findViewById(R.id.accountChangeStudentForHeadman)
-//                btn.visibility = View.GONE
-//                val linearLayout: LinearLayout = root.accountLinearLayoutAdmin
-//                linearLayout.visibility = LinearLayout.GONE
-//            }
-//            "admin" -> {
-//                val linearLayout: LinearLayout = root.accountLinearLayoutStud
-//                linearLayout.visibility = LinearLayout.GONE
-//            }
-//            "headman" -> {
-//                val linearLayout: LinearLayout = root.accountLinearLayoutAdmin
-//                linearLayout.visibility = LinearLayout.GONE
-//            }
-//        }
-//    }
+    private fun swapFragment() {
+        val newFragment = ChangeStudentFragment()
+        val fragManager: FragmentManager? = parentFragmentManager
+        val fragmentTransaction: androidx.fragment.app.FragmentTransaction = fragManager!!.beginTransaction()
+        fragmentTransaction.replace(R.id.nav_host_fragment, newFragment, "this")
+        fragmentTransaction.addToBackStack(null)
+        activity!!.onBackPressed()
+        fragmentTransaction.commit()
+    }
+
+    private fun hideElemByUser(root: View) {
+//        User.getUser().type
+        when ("headman") {
+            "student" -> {
+                val btn: Button = root.findViewById(R.id.buttonAccountChangeStudentForHeadman)
+                btn.visibility = View.GONE
+                val linearLayout: LinearLayout = root.accountLinearLayoutAdmin
+                linearLayout.visibility = LinearLayout.GONE
+            }
+            "admin" -> {
+                val linearLayout: LinearLayout = root.accountLinearLayoutHeadman
+                linearLayout.visibility = LinearLayout.GONE
+            }
+            "headman" -> {
+                val linearLayout: LinearLayout = root.accountLinearLayoutAdmin
+                linearLayout.visibility = LinearLayout.GONE
+            }
+        }
+    }
 }

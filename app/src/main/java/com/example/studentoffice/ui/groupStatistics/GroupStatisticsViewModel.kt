@@ -10,4 +10,19 @@ class GroupStatisticsViewModel : ViewModel() {
         value = "This is group statistics Fragment"
     }
     val text: LiveData<String> = _text
+
+//    fun getLocation(onSuccess: (Location) -> Unit) {
+//        locationClient.receiveLocationUpdates(object: LocationUpdatesCallback {
+//
+//            override fun onReceveLocation(location: Location){
+//                onSuccess(location)
+//            }
+//        })
+//    }
+//
+//    fun doSmth(){
+//        getLocation {
+//            liveData.value = LocationState(loading = false, location = it)
+//        }
+//    }
 }

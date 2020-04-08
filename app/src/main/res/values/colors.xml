@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#263238</color>
-    <color name="colorAccent">#1E88E5</color>
+    <!--    main colors-->
+    <color name="colorPrimary">#8aacc8</color>
+    <color name="colorPrimaryDark">#8aacc8</color>
+    <color name="colorAccent">#1976d2</color>
+    <color name="colorBackground">#ececec</color>
+    <color name="colorText">#263238</color>
+    <color name="colorTextDull">#607d8b</color>
+    <color name="colorTextWeek">#37474f</color>
+    <color name="colorFabBg">#1976d2</color>
+    <color name="colorFabIcon">#fff</color>
+    <color name="colorIcon">#455a64</color>
+    <color name="colorNewsItemBg">#eceff1</color>
+    <color name="colorNewsItemTitle">#1976d2</color>
+    <color name="colorNewsItemDescrip">#000a12</color>
+    <color name="colorNewsItemDate">#78909c</color>
+    <color name="colorButtonBg">#90caf9</color>
 
-    <color name="navDrawer">#ececec</color>
-    <color name="actionBar">#37474f</color>
-    <color name="fab">#263238</color>
+    <color name="colorPrimaryNight">#263238</color>
+    <color name="colorPrimaryDarkNight">#263238</color>
+    <color name="colorAccentNight">#64b5f6</color>
+    <color name="colorBackgroundNight">#455a64</color>
+    <color name="colorTextNight">#eceff1</color>
+    <color name="colorTextDullNight">#90a4ae</color>
+    <color name="colorTextWeekNight">#eceff1</color>
+    <color name="colorFabBgNight">#1976d2</color>
+    <color name="colorFabIconNight">#fff</color>
+    <color name="colorIconNight">#cfd8dc</color>
+    <color name="colorNewsItemBgNight">#37474f</color>
+    <color name="colorNewsItemTitleNight">#90caf9</color>
+    <color name="colorNewsItemDescripNight">#eceff1</color>
+    <color name="colorNewsItemDateNight">#78909c</color>
+    <color name="colorButtonBgNight">#263238</color>
 
-    <color name="black">#000000</color>
-    <color name="white">#ffffff</color>
-    <color name="blue">#b3e5fc</color>
-    <color name="lilBlue">#63ccff</color>
 
-    <color name="newsColorBg">#eceff1</color>
+    <!--    news fragment-->
     <color name="newsColorItemBg">#eceff1</color>
+    <color name="newsColorItemBgNight">#eceff1</color>
     <color name="newsColorTitle">#1E88E5</color>
+    <color name="newsColorTitleNight">#1E88E5</color>
     <color name="newsColorDescription">#37474f</color>
+    <color name="newsColorDescriptionNight">#37474f</color>
     <color name="newsColorDate">#e0e0e0</color>
+    <color name="newsColorDateNight">#e0e0e0</color>
+
+    <color name="actionBar">#37474f</color>
 
 </resources>

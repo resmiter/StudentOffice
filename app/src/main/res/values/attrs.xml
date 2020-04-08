@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorPrimary" format="color" />
+    <attr name="colorPrimaryDark" format="color" />
+    <attr name="colorAccent" format="color" />
+    <attr name="colorBackground" format="color" />
+
+    <attr name="colorText" format="color" />
+    <attr name="colorTextWeek" format="color" />
+    <attr name="colorTextDull" format="color" />
+
+    <attr name="colorIcon" format="color" />
+
+    <attr name="colorFabBg" format="color" />
+    <attr name="colorFabIcon" format="color" />
+
+    <attr name="colorNewsItemBg" format="color" />
+    <attr name="colorNewsItemTitle" format="color" />
+    <attr name="colorNewsItemDescrip" format="color" />
+    <attr name="colorNewsItemDate" format="color" />
+    <attr name="colorButtonBg" format="color" />
+
+    <attr name="imageHeader" format="reference" />
+    <attr name="switchThemeClicked" format="boolean" />
+</resources>

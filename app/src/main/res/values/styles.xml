@@ -1,26 +1,83 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="colorText">@color/colorText</item>
+        <item name="colorTextDull">@color/colorTextDull</item>
+        <item name="colorTextWeek">@color/colorTextWeek</item>
+        <item name="colorFabBg">@color/colorFabBg</item>
+        <item name="colorFabIcon">@color/colorFabIcon</item>
+        <item name="colorIcon">@color/colorIcon</item>
+        <item name="colorNewsItemBg">@color/colorNewsItemBg</item>
+        <item name="colorNewsItemTitle">@color/colorNewsItemTitle</item>
+        <item name="colorNewsItemDescrip">@color/colorNewsItemDescrip</item>
+        <item name="colorNewsItemDate">@color/colorNewsItemDate</item>
+        <item name="colorButtonBg">@color/colorButtonBg</item>
+        <item name="imageHeader">@mipmap/header_bg_light</item>
+        <item name="switchThemeClicked">false</item>
     </style>
+
+    <style name="AppTheme.Dark">
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkNight</item>
+        <item name="colorAccent">@color/colorAccentNight</item>
+        <item name="colorBackground">@color/colorBackgroundNight</item>
+        <item name="colorText">@color/colorTextNight</item>
+        <item name="colorTextDull">@color/colorTextDullNight</item>
+        <item name="colorTextWeek">@color/colorTextWeekNight</item>
+        <item name="colorFabBg">@color/colorFabBgNight</item>
+        <item name="colorFabIcon">@color/colorFabIconNight</item>
+        <item name="colorIcon">@color/colorIconNight</item>
+        <item name="colorNewsItemBg">@color/colorNewsItemBgNight</item>
+        <item name="colorNewsItemTitle">@color/colorNewsItemTitleNight</item>
+        <item name="colorNewsItemDescrip">@color/colorNewsItemDescripNight</item>
+        <item name="colorNewsItemDate">@color/colorNewsItemDateNight</item>
+        <item name="colorButtonBg">@color/colorButtonBgNight</item>
+        <item name="imageHeader">@mipmap/header_bg_night</item>
+        <item name="switchThemeClicked">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AccountButton" >
-        <item name="android:background">@drawable/custom_button</item>
-        <item name="android:textColor">@color/black</item>
+    <style name="TextViewHeader">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/edit_text_text_size</item>
+    </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="EditText.Login">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textColorHint">?attr/colorTextDull</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
 
+    <style name="Button.Common">
+        <item name="android:background">@drawable/button_ripple</item>
+        <item name="android:textColor">?attr/colorText</item>
+    </style>
+
+    <style name="AppTheme.SplashTheme">
+        <item name="colorPrimaryDark">@color/colorFabBg</item>
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
 </resources>
