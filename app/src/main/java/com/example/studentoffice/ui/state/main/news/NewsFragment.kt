@@ -1,39 +1,33 @@
 package com.example.studentoffice.ui.state.main.news
 
-import android.app.Dialog
+import Prin
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.studentoffice.R
 import com.example.studentoffice.adapter.NewsAdapter
 import com.example.studentoffice.model.Article
 import com.example.studentoffice.model.News
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.dialog_news.*
 import kotlinx.android.synthetic.main.fragment_news.*
 
 class NewsFragment : Fragment() {
+    private val KEY_ARTICLE: String = "key_article"
     private lateinit var newsViewModel: NewsViewModel
     private lateinit var newsRecyclerView: RecyclerView
     private lateinit var news: News
-    private lateinit var root: View
+    private var isItemClick: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         newsViewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
+        newsViewModel.requestNews()
     }
 
     override fun onCreateView(
@@ -41,8 +35,7 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        root = inflater.inflate(R.layout.fragment_news, container, false)
-        newsViewModel.requestNews()
+        val root: View = inflater.inflate(R.layout.fragment_news, container, false)
         newsViewModel.news.observe(viewLifecycleOwner, Observer {
             this.news = it
             setNews()
@@ -56,10 +49,15 @@ class NewsFragment : Fragment() {
         setListener()
     }
 
+    override fun onResume() {
+        super.onResume()
+        isItemClick = false
+    }
+
     private fun setListener() {
-        refresh_layout_news.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+        refresh_layout_news.setOnRefreshListener {
             newsViewModel.requestNews()
-        })
+        }
     }
 
     private fun setNews() {
@@ -74,40 +72,13 @@ class NewsFragment : Fragment() {
     }
 
     private fun onNewsListener(article: Article) {
-        if (activity == null) {
+        if (activity == null || isItemClick) {
             return
         }
+        isItemClick = true
         val intent = Intent(context, NewsViewingActivity::class.java)
+        intent.putExtra(KEY_ARTICLE, article)
         startActivity(intent)
-    }
-
-    private fun showDialog(article: Article) {
-        if (context == null) {
-            return
-        }
-        val newsDialog = Dialog(context!!)
-        newsDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        newsDialog.setContentView(R.layout.dialog_news)
-        val imageNews: ImageView = newsDialog.imageNewsDialog
-        val title: TextView = newsDialog.newsTitleDialog
-        val description: TextView = newsDialog.newsDescriptionDialog
-
-        imageNews.animation =
-            AnimationUtils.loadAnimation(context, R.anim.fade_transition_image_news_animation)
-        title.animation =
-            AnimationUtils.loadAnimation(context, R.anim.fade_transition_title_news_animation)
-        description.animation =
-            AnimationUtils.loadAnimation(context, R.anim.fade_transition_description_news_animation)
-        title.text = article.title
-        description.text = article.content
-        Picasso.get().load(article.urlToImage).into(imageNews)
-
-        if (newsDialog.window != null) {
-            newsDialog.window!!.setLayout(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-        }
-        newsDialog.show()
+        activity!!.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
     }
 }

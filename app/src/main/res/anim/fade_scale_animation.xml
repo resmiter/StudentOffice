@@ -11,18 +11,4 @@
         android:fromXDelta="0%"
         android:fromYDelta="-100%"
         />
-
 </set>
-
-<!--<alpha-->
-<!--android:duration="500"-->
-<!--android:fromAlpha="0.0"-->
-<!--android:toAlpha="1.0" />-->
-
-<!--<scale-->
-<!--android:duration="500"-->
-<!--android:fromXScale="0.0"-->
-<!--android:toXScale="1.0"-->
-<!--android:fromYScale="0.0"-->
-<!--android:toYScale="1.0"-->
-<!--android:fillBefore="true"/>-->

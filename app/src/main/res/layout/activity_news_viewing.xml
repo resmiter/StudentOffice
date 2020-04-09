@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorBackground"
     tools:context=".ui.state.main.news.NewsViewingActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -20,6 +21,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-   <include layout="@layout/content_viewing"/>
+    <include layout="@layout/content_viewing"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

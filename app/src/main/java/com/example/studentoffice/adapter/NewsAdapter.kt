@@ -40,7 +40,7 @@ open class NewsAdapter(
         return articles.size
     }
 
-    inner class NewsItemViewHolder(newsView: View) : RecyclerView.ViewHolder(newsView) {
+    inner class NewsItemViewHolder(private val newsView: View) : RecyclerView.ViewHolder(newsView) {
         val title: TextView = newsView.findViewById(R.id.newsTitle)
         val description: TextView = newsView.findViewById(R.id.newsDescription)
         val date: TextView = newsView.findViewById(R.id.newsDate)

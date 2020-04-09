@@ -51,6 +51,16 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.SlidrActivity">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.Dark.SlidrActivity">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
     <style name="TextViewHeader">
         <item name="android:textColor">?attr/colorText</item>
         <item name="android:textSize">16sp</item>

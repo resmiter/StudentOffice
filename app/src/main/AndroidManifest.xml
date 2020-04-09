@@ -19,8 +19,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.state.main.news.NewsViewingActivity"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".ui.state.main.MainActivity">
+            android:theme="@style/AppTheme.SlidrActivity">
         </activity>
         <activity
             android:name=".ui.state.splash.SplashActivity"
