@@ -28,7 +28,6 @@ open class NewsAdapter(
         return NewsItemViewHolder(itemView)
     }
 
-
     override fun onBindViewHolder(holder: NewsItemViewHolder, position: Int) {
         holder.title.text = articles[position].title
         holder.description.text = articles[position].description
@@ -50,7 +49,6 @@ open class NewsAdapter(
         init {
             newsView.setOnClickListener {
                 onClickOnArticle(articles[adapterPosition])
-
             }
         }
     }

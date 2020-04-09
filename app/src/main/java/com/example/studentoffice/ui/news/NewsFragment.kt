@@ -11,14 +11,21 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.studentoffice.R
 import com.example.studentoffice.adapter.NewsAdapter
 import com.example.studentoffice.model.Article
 import com.example.studentoffice.model.News
+import com.r0adkll.slidr.Slidr
+import com.r0adkll.slidr.model.SlidrConfig
+import com.r0adkll.slidr.model.SlidrInterface
+import com.r0adkll.slidr.model.SlidrPosition
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.dialog_news.*
 import kotlinx.android.synthetic.main.fragment_news.*
@@ -27,6 +34,7 @@ class NewsFragment : Fragment() {
     private lateinit var newsViewModel: NewsViewModel
     private lateinit var newsRecyclerView: RecyclerView
     private lateinit var news: News
+    private lateinit var root: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +46,25 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_news, container, false)
+        root = inflater.inflate(R.layout.fragment_news, container, false)
         newsViewModel.requestNews()
         newsViewModel.news.observe(viewLifecycleOwner, Observer {
             this.news = it
             setNews()
+            refresh_layout_news.isRefreshing = false
         })
         return root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        setListener()
+    }
+
+    private fun setListener() {
+        refresh_layout_news.setOnRefreshListener(SwipeRefreshLayout.OnRefreshListener {
+            newsViewModel.requestNews()
+        })
     }
 
     private fun setNews() {
@@ -58,11 +78,17 @@ class NewsFragment : Fragment() {
         }
     }
 
-    fun onNewsListener(article: Article) {
-        showDialog(article)
+    private fun onNewsListener(article: Article) {
+        if (activity == null) {
+            return
+        }
+        val newsViewingFragment =  NewsViewingFragment()
+        activity!!.supportFragmentManager.beginTransaction()
+            .add(R.id.nav_host_fragment, newsViewingFragment)
+            .addToBackStack(null)
+            .commit()
     }
 
-    //dialog fragment
     private fun showDialog(article: Article) {
         if (context == null) {
             return

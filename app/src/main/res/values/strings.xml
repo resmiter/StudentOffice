@@ -47,4 +47,7 @@
     <string name="account_create_student">"Добавить студента"</string>
     <string name="account_change_student">"Изменить студента"</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
