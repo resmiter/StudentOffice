@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.activity.main
+package com.example.studentoffice.ui.state.main
 
 import android.Manifest
 import android.content.Context
@@ -27,7 +27,7 @@ import com.example.studentoffice.R
 import com.example.studentoffice.model.App
 import com.example.studentoffice.model.SharedPrefConst
 import com.example.studentoffice.model.User
-import com.example.studentoffice.ui.activity.login.LoginActivity
+import com.example.studentoffice.ui.state.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.switch_item.view.*
@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
         nav_view.setupWithNavController(navController)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun changeTheme(isSwitchClicked: Boolean) {

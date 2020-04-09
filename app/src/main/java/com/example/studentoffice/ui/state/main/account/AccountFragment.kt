@@ -1,6 +1,5 @@
-package com.example.studentoffice.ui.account
+package com.example.studentoffice.ui.state.main.account
 
-import android.app.FragmentTransaction
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import com.example.studentoffice.R
-import com.example.studentoffice.ui.account.tabs.ChangeStudentFragment
+import com.example.studentoffice.ui.state.main.account.tabs.ChangeStudentFragment
 import kotlinx.android.synthetic.main.fragment_account.view.*
 
 

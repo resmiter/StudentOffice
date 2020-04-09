@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.groupStatistics
+package com.example.studentoffice.ui.state.main.groupStatistics
 
 import android.os.Bundle
 import android.view.LayoutInflater

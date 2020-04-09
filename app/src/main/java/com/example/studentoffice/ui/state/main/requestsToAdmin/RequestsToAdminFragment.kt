@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.requestsToAdmin
+package com.example.studentoffice.ui.state.main.requestsToAdmin
 
 import android.os.Bundle
 import android.view.LayoutInflater

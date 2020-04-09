@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.visitRequests
+package com.example.studentoffice.ui.state.main.visitRequests
 
 import android.os.Bundle
 import android.view.LayoutInflater

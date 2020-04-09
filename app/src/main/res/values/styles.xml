@@ -76,7 +76,7 @@
         <item name="android:textColor">?attr/colorText</item>
     </style>
 
-    <style name="AppTheme.SplashTheme">
+    <style name="AppTheme.NoActionBar.SplashTheme">
         <item name="colorPrimaryDark">@color/colorFabBg</item>
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>

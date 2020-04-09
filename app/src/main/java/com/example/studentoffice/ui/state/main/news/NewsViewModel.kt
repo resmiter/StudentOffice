@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.news
+package com.example.studentoffice.ui.state.main.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

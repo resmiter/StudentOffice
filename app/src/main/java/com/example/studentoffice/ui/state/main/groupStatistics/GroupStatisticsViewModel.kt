@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.groupStatistics
+package com.example.studentoffice.ui.state.main.groupStatistics
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

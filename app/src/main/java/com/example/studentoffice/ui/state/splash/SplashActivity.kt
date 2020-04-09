@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.activity.splash
+package com.example.studentoffice.ui.state.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.studentoffice.model.AuthorizationResponse
-import com.example.studentoffice.ui.activity.login.LoginActivity
-import com.example.studentoffice.ui.activity.main.MainActivity
+import com.example.studentoffice.ui.state.login.LoginActivity
+import com.example.studentoffice.ui.state.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var spalshViewModel: SplashViewModel

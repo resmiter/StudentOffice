@@ -1,6 +1,7 @@
-package com.example.studentoffice.ui.news
+package com.example.studentoffice.ui.state.main.news
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,8 +12,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,10 +21,6 @@ import com.example.studentoffice.R
 import com.example.studentoffice.adapter.NewsAdapter
 import com.example.studentoffice.model.Article
 import com.example.studentoffice.model.News
-import com.r0adkll.slidr.Slidr
-import com.r0adkll.slidr.model.SlidrConfig
-import com.r0adkll.slidr.model.SlidrInterface
-import com.r0adkll.slidr.model.SlidrPosition
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.dialog_news.*
 import kotlinx.android.synthetic.main.fragment_news.*
@@ -82,11 +77,8 @@ class NewsFragment : Fragment() {
         if (activity == null) {
             return
         }
-        val newsViewingFragment =  NewsViewingFragment()
-        activity!!.supportFragmentManager.beginTransaction()
-            .add(R.id.nav_host_fragment, newsViewingFragment)
-            .addToBackStack(null)
-            .commit()
+        val intent = Intent(context, NewsViewingActivity::class.java)
+        startActivity(intent)
     }
 
     private fun showDialog(article: Article) {

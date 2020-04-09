@@ -1,13 +1,13 @@
-package com.example.studentoffice.ui.account
+package com.example.studentoffice.ui.state.main.requestsToAdmin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class AccountViewModel : ViewModel() {
+class RequestsToAdminViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is account Fragment"
+        value = "This is requests to admin Fragment"
     }
     val text: LiveData<String> = _text
 }

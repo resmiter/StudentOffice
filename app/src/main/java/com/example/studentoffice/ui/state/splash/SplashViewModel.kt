@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.activity.splash
+package com.example.studentoffice.ui.state.splash
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.account.tabs
+package com.example.studentoffice.ui.state.main.account.tabs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

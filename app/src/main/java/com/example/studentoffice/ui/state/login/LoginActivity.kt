@@ -1,4 +1,4 @@
-package com.example.studentoffice.ui.activity.login
+package com.example.studentoffice.ui.state.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.studentoffice.R
 import com.example.studentoffice.model.User
-import com.example.studentoffice.ui.activity.main.MainActivity
+import com.example.studentoffice.ui.state.main.MainActivity
+import com.r0adkll.slidr.Slidr
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

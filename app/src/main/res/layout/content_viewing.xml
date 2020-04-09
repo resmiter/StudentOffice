@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="?attr/colorBackground"
-    tools:context=".ui.news.NewsViewingFragment">
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.state.main.news.NewsViewingFragment"
+    tools:showIn="@layout/activity_news_viewing">
 
     <ImageView
-        android:id="@+id/imageNewsDialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        android:id="@+id/imageNewsViewing"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         android:src="@mipmap/person"
         tools:ignore="ContentDescription" />
 
@@ -34,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="sdfdasfdsgasagsdasdfdasfdsgasagsdasdfdasfdsgasagsdasdfdasfdsgasagsda"
                 android:textColor="?attr/colorNewsItemTitle"
                 android:textSize="@dimen/news_dialog_title_text_size"
                 android:textStyle="bold" />
@@ -43,6 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="fill"
+                android:text="sdfdasfdsgasagsdasdfdasfdsgasagsdasdfdasfdsgasagsdasdfdasfdsgasagsda"
                 android:textColor="?attr/colorText"
                 android:textSize="@dimen/news_dialog_description_text_size" />
         </LinearLayout>
